@@ -7,6 +7,11 @@
     <% results.forEach(function(post) {%>
         <li>
             <%= post.message %>
+            <br>
+                 Post created on  <%= post.createdAt %>
+                 <br>
+           <input type="button" onclick="window.location.href='<%= post.imageUrl %>';" value = "Image">
+
         </li>
     <% }); %>
 </ol>
