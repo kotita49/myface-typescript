@@ -3,6 +3,15 @@
 <%- include('_header') -%>
 <body>
 <h1><%= name %></h1>
+<p>
+    <img src= '<%= profileImageUrl %>' width="150" height="150">
+    <h3>My username : <%= username %></h3>
+    My email: <%= email %> 
+</p>
+<p>  <input type="button" onclick="window.location.href='<%= coverImageUrl %>';" value = "Click to see my cover image!"> </p>
+   
+
+
 </body>
 <%- include('_footer') -%>
 </html>

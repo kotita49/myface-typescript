@@ -1,24 +1,17 @@
 <html lang="en-gb">
 <%- include('_head') -%>
 <%- include('_header') -%>
-<header>
-    <h1>MyFace</h1>
-    <p>The social media site exclusively for robots!</p>
-  </header>
+
 <body>
 <h1>Users</h1>
 <ul>
     <% results.forEach(function(user) {%>
         <li>
            <h4> <%= user.name %></h4>
-           
-                  
             
-            <img src= '<%= user.profileImageUrl %>' width="150" height="150">
-
-            Username: <%= user.username %>, Email: <%= user.email %>
-          <br>
-            <input type="button" onclick="window.location.href='<%= user.coverImageUrl %>';" value = "Cover Image">
+           <form method="get" action="/users/<%= user.id %>/">
+               <button type="submit">User info</button>
+            </form>
         </li>
     <% }); %>
     </ul>
