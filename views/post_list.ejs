@@ -3,18 +3,26 @@
 <%- include('_header') -%>
 <body>
 <h1>Posts</h1>
-<ol>
+<ul>
     <% results.forEach(function(post) {%>
         <li>
-            <%= post.message %>
-            <br>
-                 Post created on  <%= post.createdAt %>
-                 <br>
+           <h3> <%= post.message %></h3>
+               Post created on  <%= post.createdAt %> 
+                                  <br>
            <input type="button" onclick="window.location.href='<%= post.imageUrl %>';" value = "Image">
 
         </li>
     <% }); %>
-</ol>
+    </ul>
+
+    <%if (next) { %>
+        <a href="<%= next %>">Next</a>
+    <% } %>
+    <%if (previous) { %>
+        <a href="<%= previous %>">Previous</a>
+    <% } %>
+
+
 </body>
 <%- include('_footer') -%>
 </html>
