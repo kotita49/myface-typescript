@@ -1,3 +1,4 @@
+
 <html lang="en-gb">
 <%- include('_head') -%>
 <%- include('_header') -%>
@@ -7,10 +8,23 @@
     <% results.forEach(function(post) {%>
         <li>
            <h3> <%= post.message %></h3>
-               Post created on  <%= post.createdAt %> 
-                                  <br>
-           <input type="button" onclick="window.location.href='<%= post.imageUrl %>';" value = "Image">
+              <p> Post created on  <%= post.createdAt %> by <%= post.postedBy.name %></p>
+                               
+         <img src='<%= post.imageUrl %>' value = "Image">
+         <form method="post" action="/posts/<%= post.id %>/like/">
+            
+            <button type="submit">Like</button>
+        </form>
+        <form method="post" action="/posts/<%= post.id %>/dislike/">
+            
+            <button type="submit">Dislike</button>
+        </form>
+         <!-- <a href="/posts/<%= post.id %>/like/"> Like </a> -->
+         
 
+
+          <p> Liked by: <%=post.likedBy.length %></p>
+          <p> Disliked by: <%=post.dislikedBy.length %></p>
         </li>
     <% }); %>
     </ul>
