@@ -3,21 +3,23 @@
 <%- include('_header') -%>
 
 <body>
-<h1>Users</h1>
-<ul>
+
+<div class="userListContainer">
+    <h1 class="usersH1">Users</h1>
     <% results.forEach(function(user) {%>
-        <li>
-           <h4> <%= user.name %></h4>
-            
-            <img src= '<%= user.profileImageUrl %>' width="150" height="150">
-            Username: <%= user.username %>, Email: <%= user.email %>
-          <br>
+       <div class="user-item">
+                 <img src= '<%= user.profileImageUrl %>'>
+            <p class="username"> <%= user.name %></p>
+           <p> <%= user.username %>, <%= user.email %></p>
+         
           <form method="get" action="/users/<%= user.id %>/">
             <button type="submit">User info</button>
          </form>
-        </li>
+        </div>
+  
     <% }); %>
-    </ul>
+
+</div>
     </body>
     <footer>
 <%if (next) { %>

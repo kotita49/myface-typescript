@@ -3,11 +3,25 @@
 @import "header.css";
 
 
+
 body{
     width: 100%;
     font-family:'Open Sans';
 }
-
+.userListContainer {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.user-item{
+    width: 55%;
+    
+}
+.usersH1{
+    text-align: left;
+    padding: 25px 50px;
+    
+}
 .grid-container-chloe{
     display:flex;
     flex-direction: row;

@@ -1,0 +1,17 @@
+h4, p{
+    color: white;
+}
+
+.userListContainer {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.user-item{
+    width: 25%;
+    
+}
+img{
+    width:150px;
+    height:150px
+}
