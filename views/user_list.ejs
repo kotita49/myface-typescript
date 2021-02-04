@@ -9,9 +9,12 @@
         <li>
            <h4> <%= user.name %></h4>
             
-           <form method="get" action="/users/<%= user.id %>/">
-               <button type="submit">User info</button>
-            </form>
+            <img src= '<%= user.profileImageUrl %>' width="150" height="150">
+            Username: <%= user.username %>, Email: <%= user.email %>
+          <br>
+          <form method="get" action="/users/<%= user.id %>/">
+            <button type="submit">User info</button>
+         </form>
         </li>
     <% }); %>
     </ul>

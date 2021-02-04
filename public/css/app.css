@@ -1,1 +1,121 @@
-/* Add your styles here. */
+@import "fonts.css";
+@import "userDetail.css";
+@import "header.css";
+
+
+body{
+    width: 100%;
+    font-family:'Open Sans';
+}
+
+.grid-container-chloe{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-evenly;
+}
+.item-post{
+    width: 27%;
+    margin: 24px 24px;
+    background-color:#151820; 
+}
+.profileImage{
+    max-width: 16%;
+    height:auto;
+    border-radius: 50%;
+    border:5px solid white;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.postImage {
+    display: block;
+    max-width: 95%;
+    height: auto;
+    padding-top: 0;
+    border: 5px #151820;
+    margin-bottom: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.postImageSpace{
+    justify-items: center;
+    justify-content: center;
+}
+
+.postTopMessage{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 0px;
+    justify-content: space-evenly;
+    
+}
+.postMessage{
+    float: left;
+}
+.likesClass{
+    float:left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    
+}
+.dislikesClass{
+    float:right;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: right;
+   
+
+}
+
+
+
+@media only screen and (max-width: 900px){
+    body{
+        font-size: 14px;
+    }
+h1 {
+    font-size: 24px;
+
+}
+h3,h4,ul{
+    font-size: 20px ;
+}
+h5{
+    font-size: 16px;
+}
+.item-post{
+    width: 39%;
+    padding: 16px 16px;
+    
+}
+}
+
+@media only screen and (max-width: 400px){
+    body{
+        font-size: 14px;
+    }
+h1{
+    font-size: 24px;
+
+}
+h3,h4,ul{
+    font-size: 20px ;
+}
+h5{
+    font-size: 16px;
+}
+.item-post{
+    width: 80%;
+    padding: 12px 12px;
+    
+}
+
+}

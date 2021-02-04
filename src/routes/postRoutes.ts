@@ -13,10 +13,6 @@ router.get('/', async (request, response) => {
     return response.render('post_list', postList);
 });
 
-router.get('/user/', async (request, response) => {
-    return response.render('user_detail');
-});
-
 router.get('/create/', async (request, response) => {
     return response.render('create_post');
 });

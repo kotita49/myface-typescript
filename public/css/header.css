@@ -1,0 +1,56 @@
+.navcontainer{
+    background-color: #151820;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+.myface{
+text-align: left;
+padding-right: 380px;
+}
+.blue{
+    color: #2985ff;
+}
+a {
+text-decoration: none;
+text-align: center;
+text-transform: none;
+padding: 10px 10px;
+margin: 0 auto;
+}
+.newpost{
+    text-align: right;
+    padding-left: 380px;
+}
+nav{
+    
+}
+@media only screen and (max-width: 900px){
+    a{
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+    .navcontainer{
+    font-size: 14px;
+    }   
+    .myface{
+    padding-right: 200px;
+    }
+    .newpost{
+        text-align: right;
+        padding-left: 200px;
+    }
+    }
+    @media only screen and (max-width: 400px){
+        a{
+            padding: 8px 8px;
+            font-size: 10px;
+        }
+        .myface{
+            padding-right: 70px;
+            }
+            .newpost{
+                text-align: right;
+                padding-left: 70px;
+            }
+        }

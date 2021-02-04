@@ -1,41 +1,61 @@
-
 <html lang="en-gb">
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
 <h1>Posts</h1>
-<ul>
+<br>
+<div class="grid-container-chloe">
     <% results.forEach(function(post) {%>
-        <li>
-           <h3> <%= post.message %></h3>
-              <p> Post created on  <%= post.createdAt %> by <%= post.postedBy.name %></p>
-                               
-         <img src='<%= post.imageUrl %>' value = "Image">
-         <form method="post" action="/posts/<%= post.id %>/like/">
+        <div class="item-post">  
+              
+            <img class="profileImage" src= '<%= post.postedBy.profileImageUrl %>'>
+            <div class='postTopMessage'>
+                <h7 class="postedBy"> <%= post.postedBy.username %> </h7>
+                <p1 class="postedDate"> Posted: <%= post.createdAt %> </p1>
+    
+            </div>  
             
-            <button type="submit">Like</button>
-        </form>
-        <form method="post" action="/posts/<%= post.id %>/dislike/">
+            <h6 class="postMessage"> <%= post.message %></h6> 
+            <div class="postImageSpace" >         
+                <img class="postImage" src='<%= post.imageUrl %>' value = "Image" >
+            </div> 
+            <div class="likesClass">
+                <form class='likeButton' method="post" action="/posts/<%= post.id %>/like/">
+                    <button type="submit">Like</button>
+                </form>
+                <%if (post.likedBy) { %>
+                    <p2 class='likesCounter'> Likes: <%=post.likedBy.length %> </p2>
+                
+                <% } %>
+                <%if (post.likedBy==null) { %>
+                    <p2 class='likesCounter' >  No likes. </p2>
+                    <% } %>  
+            </div>    
+            <div class="dislikesClass">
+                <form class='dislikeButton' method="post" action="/posts/<%= post.id %>/dislike/">
+                    <button type="submit">Dislike</button>
+                </form>
             
-            <button type="submit">Dislike</button>
-        </form>
-         <!-- <a href="/posts/<%= post.id %>/like/"> Like </a> -->
-         
-
-
-          <p> Liked by: <%=post.likedBy.length %></p>
-          <p> Disliked by: <%=post.dislikedBy.length %></p>
-        </li>
+                
+                <%if (post.dislikedBy) { %>
+                    <p2 class='dislikesCounter'> Dislikes: <%=post.dislikedBy.length %> </p2>
+                    
+                <% } %>
+                <%if (post.dislikedBy==null) { %>
+                    <p2 class='dislikesCounter'>  No dislikes. </p2>
+        
+                 <% } %>   
+            </div>
+        </div> 
     <% }); %>
-    </ul>
+</div>
 
-    <%if (next) { %>
-        <a href="<%= next %>">Next</a>
-    <% } %>
-    <%if (previous) { %>
-        <a href="<%= previous %>">Previous</a>
-    <% } %>
-
+<%if (next) { %>
+    <a href="<%= next %>">Next</a>
+<% } %>
+<%if (previous) { %>
+    <a href="<%= previous %>">Previous</a>
+<% } %>
 
 </body>
 <%- include('_footer') -%>
