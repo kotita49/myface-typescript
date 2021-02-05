@@ -3,9 +3,12 @@
 <%- include('_header') -%>
 
 <body>
-
-<div class="userListContainer">
     <h1 class="usersH1">Users</h1>
+    <form method="get" action="/users/create/">
+        <button type="submit">Create new user</button>
+     </form>
+<div class="userListContainer">
+    
     <% results.forEach(function(user) {%>
        <div class="user-item">
                  <img src= '<%= user.profileImageUrl %>'>

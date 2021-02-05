@@ -30,6 +30,16 @@ justify-content: space-evenly;
     background-color: #151820;
     margin-bottom: 5px;
 }
+.userPostImage{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    padding-top: 0;
+    border: 5px #151820;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
 h1{
 font-family: "Open Sans" ;
 font-size: 32px;

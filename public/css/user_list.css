@@ -1,7 +1,16 @@
 h4, p{
     color: white;
 }
-
+.userPostImage{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    padding-top: 0;
+    border: 5px #151820;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .userListContainer {
     display:flex;
     flex-direction: column;
