@@ -7,15 +7,16 @@ document.addEventListener('DOMContentLoaded', function() {
 //closeMenu();
 
 });
-document.addEventListener("keypress", function(e){
+window.addEventListener("keydown", function (event) {
     var x = document.getElementById("menu");
-    if (x.style.display === "block" && (e.key=='Escape'||e.key=='Esc'||e.keyCode==27)) {
-        x.style.display === "none"
+    if(event.key==27||event.key=="Escape"||event.key=="esc") {
+     x.style.display = "none";
+    console.log("esc")
     }
-});
+}, true);
 
 document.addEventListener('click', function(event){
-  console.log('click found')
+  
   var x = document.getElementById("menu");
     if (x.style.display === "block") {
       var isClickInsideNav = document.getElementById("menu").contains(event.target);
@@ -35,26 +36,14 @@ function changeBackgroundColour(){
   }
 }
   function openMenu() {
-    console.log('open menu')
-    var x = document.getElementById("menu");
+     var x = document.getElementById("menu");
     if (x.style.display === "none") {
       x.style.display = "block";
-      
-
-    } else {
+      } else {
       x.style.display = "none";
     }
   }
- function closeMenu(){
-    var x = document.getElementById("menu");
-    if (x.style.display === "block") {
-      var isClickInside = document.getElementById("menu").contains(event.target);
-      if (!isClickInside) {
-        //the click was outside the specifiedElement, do something
-        document.getElementById("menu").style.display = "none"
-    }
-  }
-}
+ 
    
 function openNav() {
   document.getElementById("mySidenav").style.width = '75%';
