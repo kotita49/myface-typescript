@@ -1,13 +1,14 @@
 @import "fonts.css";
 @import "userDetail.css";
 @import "header.css";
-
+@import "sidenav.css";
 
 
 body{
     width: 100%;
     font-family:'Open Sans';
 }
+
 .userListContainer {
     display:flex;
     flex-direction: column;
@@ -19,7 +20,14 @@ body{
 }
 button{
     height: 24px;
+    border-radius: 30%;
+    background-color: rgb(148, 214, 87);
 }
+
+
+
+
+
 form{
 padding: 10px 10px;
 width: 80%;

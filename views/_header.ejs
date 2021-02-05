@@ -1,5 +1,7 @@
 <header>
-    <div class="navcontainer">
+    <div class="menuButton">
+    <button id="menuButton" type="button" onclick="openMenu()">Menu</button></div>
+    <div id="menu" class="navcontainer">
     <nav>
         <a class="myface" href="/users/1">MyFace</a>
         
@@ -11,4 +13,17 @@
       
     </nav>
 </div>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; </a>
+    <a class="myface" href="/users/1">MyFace</a>  
+    <a href="/posts">Home</a>
+    <a class="blue" href="/posts">Posts</a>
+    <a href="/users">Users</a>
+    <a class="newpost" href="/posts/create/">+New Post</a>
+</div>
+<div class="sideBarButton">
+<span id="sideBar" onclick="openNav()">&#9776; </span>
+</div> 
+
 </header>
